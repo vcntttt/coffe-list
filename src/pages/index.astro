@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Container } from '../components/Container.tsx';
+---
+
+<Layout 
+	title="Coffee List"
+	description = "Exercise from devchallenges.io"
+	>
+	<main class="max-w-7xl mx-auto bg-[#1B1D1F] my-32 p-20 rounded-md text-center flex flex-col gap-y-2 z-10">
+		<img src="/vector.svg" alt="vector" class="absolute right-[43.5rem] top-40 -z-10 ">
+		<di class="z-20">
+			<h1 class="text-4xl font-bold">Our Collection</h1>
+			<h2 class="text-xl text-slate-500 text-pretty max-w-lg mx-auto">
+				Introducing our Coffee Collection, a selection of unique coffees from different roast types and origins, expertly roasted in small batches and shipped fresh weekly.
+			</h2>
+		</div>
+		<Container client:load/>
+	</main>
+</Layout>

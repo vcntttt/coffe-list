@@ -1,0 +1,42 @@
+---
+import '@fontsource-variable/dm-sans';
+
+interface Props {
+	title: string;
+	description: string
+}
+
+const { title , description} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{title}</title>
+	</head>
+	<body>
+		<img src="/bg-cafe.jpg" alt="" class="absolute -z-10">
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	:root{
+		color-scheme: light dark;
+	}
+	html{
+		font-family: 'DM Sans Variable'
+	}
+	body{
+		margin: 0 auto;
+  	background: #111315;
+		color: #FEF7EE;
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+	}
+</style>
