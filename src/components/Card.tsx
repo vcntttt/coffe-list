@@ -3,7 +3,7 @@ import type { Coffee } from "../types";
 export function Card({ item }: { item: Coffee }) {
   const { image, name, price, popular } = item;
   return (
-    <article className="max-w-[260px] p-2 flex gap-2 flex-col relative">
+    <article className="max-w-[400px] md:max-w-[260px] p-2 flex gap-2 flex-col relative mx-auto">
       {popular && (
         <div>
           <span className="bg-[#F6C768] text-[#111315] rounded-xl font-semibold text-xs py-1 px-2 absolute top-6 left-4">Popular</span>
